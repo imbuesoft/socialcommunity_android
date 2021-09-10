@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/android_card_view_example"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent"
+    tools:context=".LateDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:elevation="4dp"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/late_name4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/late_image"
+            android:background="#FFF1CA"
+            android:padding="5dp"
+            android:text="મું. જેતપુર, જી. રાજકોટ"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/late_note_single" />
+
+        <TextView
+            android:id="@+id/late_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/late_image"
+            android:paddingBottom="5dp"
+            android:text="સ્વ. ભીખુભાઈ રામજીભાઈ ગુજરાતી"
+            android:textColor="@color/blue_800"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/late_image" />
+
+        <TextView
+            android:id="@+id/late_note_single"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/late_image"
+            android:paddingBottom="5dp"
+            android:text="સ્વ. તા. ૧૩/૦૨/૨૦૨૦, ગુરૂવાર \n
+સંવત ૨૦૭૬ મહા વદ ૫. \n
+મું. જેતપુર, જી. રાજકોટ
+\n\n
+અંજલી આપતાં શબ્દો ખૂટે છે. કલ્પી ન શકાય તેવી આપાની અણધારી વિદાય હજુ ગઈ કાલ સુધી આપણી હૂંફ હતી. પરંતુ આજે રહી ફક્ત લાગણીસભર યાદ. દિલ હજુ માનતું નથી કે આપ અમારી વચ્ચે નથી. જન્મ તેનું મૃત્યુ આ સનાતન સત્ય હોવા છતાં આપશ્રી અમારી વચ્ચે મોજૂદ છો તેવો ભાસ થાય છે. પ્રભુ આપના દિવ્ય આત્માને પરમ શાંતિ અર્પે એ જ પ્રાર્થના.
+"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/late_name" />
+
+        <TextView
+            android:id="@+id/late_discription_single"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/late_image"
+            android:paddingBottom="5dp"
+            android:text="લી. શ્રી પ્રભાબેન ભીખુભાઇ ગુજરાતી \n
+સ્વ. અશ્વિનભાઈ ભીખુભાઇ ગુજરાતી\n
+સ્વ. રામજીભાઈ ભીમજીભાઈ ગુજરાતી\n	સ્વ. રતનબેન રામજીભાઈ ગુજરાતી\n
+શ્રી રાજેશભાઈ ભીખુભાઈ ગુજરાતી\n 	શ્રી મનીષાબેન રાજેશભાઈ ગુજરાતી\n
+શ્રી પ્રફુલભાઈ રામજીભાઈ ગુજરાતી\n	શ્રી રમાબેન પ્રફુલભાઈ ગુજરાતી\n
+શ્રી વિરલ પ્રફુલભાઈ ગુજરાતી\n		શ્રી પ્રકાશ પ્રફુલભાઈ ગુજરાતી.\n
+\n
+દીકરી/જમાઈ : બડોદર\n
+શ્રીમતી જાગૃતિબેન કિશોરભાઈ મકવાણા\n
+શ્રી કિશોરભાઈ કડવાભાઇ મકવાણા\n
+\n
+દીકરી/જમાઈ : જૂનાગઢ\n
+શ્રીમતી જયશ્રીબેન પ્રફુલભાઇ ગોહેલ\n
+શ્રી પ્રફુલભાઇ નાનુભાઇ ગોહેલ\n
+"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/late_name4" />
+
+        <TextView
+            android:id="@+id/late_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/late_image"
+            android:paddingBottom="5dp"
+            android:text="શ્રદ્ધાંજલિ"
+            android:textColor="@color/blue_800"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/late_image"
+            android:layout_width="110dp"
+            android:layout_height="142dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_image"
+            android:padding="1dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/bhikhubhai_s"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/late_title" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="51dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/late_title"
+            app:srcCompat="@drawable/agarbati" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="51dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/late_title"
+            app:srcCompat="@drawable/agarbati" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

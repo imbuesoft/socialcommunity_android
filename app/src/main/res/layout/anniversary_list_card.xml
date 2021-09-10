@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/android_card_view_example"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/anni_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/border_image"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/prakash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/anni_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/anni_image"
+            android:text="Prakash Gujarati"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/anni_remaindays"
+            app:layout_constraintStart_toEndOf="@+id/anni_image"
+            app:layout_constraintTop_toTopOf="@+id/anni_image" />
+
+        <TextView
+            android:id="@+id/anni_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/late_name"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/anni_image"
+            android:text="08/04/1990"
+            android:textColor="@color/green_800"
+            app:layout_constraintEnd_toStartOf="@+id/anni_remaindays"
+            app:layout_constraintStart_toEndOf="@+id/anni_image"
+            app:layout_constraintTop_toBottomOf="@+id/anni_name" />
+
+        <TextView
+            android:id="@+id/anni_turns"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/anni_date"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/anni_image"
+            android:text="Turns 29 | Birthday"
+            android:textColor="@color/grey_60"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toStartOf="@+id/anni_remaindays"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/anni_date" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/anni_date"
+            app:layout_constraintTop_toBottomOf="@+id/anni_date"
+            app:srcCompat="@android:drawable/presence_away" />
+
+        <TextView
+            android:id="@+id/anni_remaindays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="40\nDays"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:background="@drawable/textline"
+            android:textStyle="bold"
+            android:textColor="@color/green_800"
+            android:padding="12dp"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

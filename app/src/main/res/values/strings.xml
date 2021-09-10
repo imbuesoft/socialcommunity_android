@@ -1,0 +1,494 @@
+<resources>
+    <string name="app_name">KhantRajputSamaj</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="day">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>2012</item>
+        <item>2011</item>
+        <item>2010</item>
+        <item>2009</item>
+        <item>2008</item>
+        <item>2007</item>
+        <item>2006</item>
+        <item>2005</item>
+        <item>2004</item>
+        <item>2003</item>
+        <item>2002</item>
+        <item>2001</item>
+        <item>2000</item>
+        <item>1999</item>
+        <item>1998</item>
+        <item>1997</item>
+        <item>1996</item>
+        <item>1995</item>
+        <item>1994</item>
+        <item>1993</item>
+        <item>1992</item>
+        <item>1991</item>
+        <item>1990</item>
+        <item>1989</item>
+        <item>1988</item>
+        <item>1987</item>
+        <item>1986</item>
+        <item>1985</item>
+        <item>1984</item>
+        <item>1983</item>
+        <item>1982</item>
+        <item>1981</item>
+        <item>1980</item>
+        <item>1979</item>
+        <item>1978</item>
+        <item>1977</item>
+        <item>1976</item>
+        <item>1975</item>
+        <item>1974</item>
+        <item>1973</item>
+        <item>1972</item>
+        <item>1971</item>
+        <item>1970</item>
+        <item>1969</item>
+        <item>1968</item>
+        <item>1967</item>
+        <item>1966</item>
+        <item>1965</item>
+        <item>1964</item>
+        <item>1963</item>
+        <item>1962</item>
+        <item>1961</item>
+        <item>1960</item>
+    </string-array>
+
+    <string-array name="height">
+        <item>4</item>
+        <item>4.1</item>
+        <item>4.2</item>
+        <item>4.3</item>
+        <item>4.4</item>
+        <item>4.5</item>
+        <item>4.6</item>
+        <item>4.7</item>
+        <item>4.8</item>
+        <item>4.9</item>
+        <item>4.1</item>
+        <item>4.11</item>
+        <item>4.12</item>
+        <item>5</item>
+        <item>5.1</item>
+        <item>5.2</item>
+        <item>5.3</item>
+        <item>5.4</item>
+        <item>5.5</item>
+        <item>5.6</item>
+        <item>5.7</item>
+        <item>5.8</item>
+        <item>5.9</item>
+        <item>5.1</item>
+        <item>5.11</item>
+        <item>5.12</item>
+        <item>6</item>
+        <item>6.1</item>
+        <item>6.2</item>
+        <item>6.3</item>
+        <item>6.4</item>
+        <item>6.5</item>
+        <item>6.6</item>
+        <item>6.7</item>
+        <item>6.8</item>
+        <item>6.9</item>
+        <item>6.1</item>
+        <item>6.11</item>
+        <item>6.12</item>
+    </string-array>
+
+    <string-array name="weight">
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+        <item>93</item>
+        <item>94</item>
+        <item>95</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
+        <item>100</item>
+        <item>101</item>
+        <item>102</item>
+        <item>103</item>
+        <item>104</item>
+        <item>105</item>
+        <item>106</item>
+        <item>107</item>
+        <item>108</item>
+        <item>109</item>
+        <item>110</item>
+    </string-array>
+
+
+    <string-array name="EducationCategory">
+        <item>8th Completed</item>
+        <item>9th Completed</item>
+        <item>10th Completed</item>
+        <item>12th Completed</item>
+        <item>Graduate</item>
+        <item>Post Graduate</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="MaritalStatus">
+        <item>વિવાહિત</item>
+        <item>અવિવાહિત</item>
+        <item>વિધવા</item>
+        <item>વિધુર</item>
+        <item>છૂટાછેડા</item>
+    </string-array>
+
+
+    <string-array name="Handicape">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+
+    <string-array name="Gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string name="DonerName">દાન આપનાર નું નામ</string>
+    <string name="DonorMobile">દાન આપનાર નો નંબર</string>
+    <string name="OnlineDonation">online donation</string>
+    <string name="RecMobile">દાન લેનાર ના નંબર</string>
+    <string name="RecName">દાન લેનાર નું નામ</string>
+    <string name="abc_action_bar_home_description">Navigate home</string>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_menu_overflow_description">More options</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_activity_chooser_view_see_all">See all</string>
+    <string name="abc_activitychooserview_choose_application">Choose an app</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_font_family_body_1_material">sans-serif</string>
+    <string name="abc_font_family_body_2_material">sans-serif-medium</string>
+    <string name="abc_font_family_button_material">sans-serif-medium</string>
+    <string name="abc_font_family_caption_material">sans-serif</string>
+    <string name="abc_font_family_display_1_material">sans-serif</string>
+    <string name="abc_font_family_display_2_material">sans-serif</string>
+    <string name="abc_font_family_display_3_material">sans-serif</string>
+    <string name="abc_font_family_display_4_material">sans-serif-light</string>
+    <string name="abc_font_family_headline_material">sans-serif</string>
+    <string name="abc_font_family_menu_material">sans-serif</string>
+    <string name="abc_font_family_subhead_material">sans-serif</string>
+    <string name="abc_font_family_title_material">sans-serif-medium</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">delete</string>
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+    <string name="abc_menu_function_shortcut_label">Function+</string>
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">space</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">Menu+</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_query">Search query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_shareactionprovider_share_with">Share with</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="abhinandan">અભિનંદન</string>
+    <string name="abhiyas">અભ્યાસ</string>
+    <string name="address">સરનામું</string>
+
+    <string name="atak">અટક</string>
+    <string name="avasandate">અવસાન તા.</string>
+    <string name="avasannondh">અવસાન નોંધ</string>
+    <string name="bahen">બહેન</string>
+    <string name="bhai">ભાઈ</string>
+    <string name="biodata">પરિચય</string>
+    <string name="birthdate">જન્મ તારીખ</string>
+    <string name="bit_rate_value_with_unit">%d kbps</string>
+    <string name="bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="business">બીઝનેસ</string>
+    <string name="businessdirecotry">વ્યવસાય ડિરેક્ટરી</string>
+    <string name="cashDonation">Cash donation</string>
+    <string name="caste_news">જ્ઞાતિ ન્યૂઝ</string>
+    <string name="category">કેટેગરી</string>
+    <string name="character_counter_content_description">Character limit exceeded %1$d of %2$d</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="charity">ચેરિટી</string>
+    <string name="chasma">ચશ્માં</string>
+    <string name="city">શહેર</string>
+    <string name="closeDrawer">Navigation View</string>
+    <string name="common_google_play_services_enable_button">Enable</string>
+    <string name="common_google_play_services_enable_text">%1$s won\'t work unless you enable Google Play services.</string>
+    <string name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_install_button">Install</string>
+    <string name="common_google_play_services_install_text">%1$s won\'t run without Google Play services, which are missing from your device.</string>
+    <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s won\'t run without Google Play services, which are not supported by your device.</string>
+    <string name="common_google_play_services_update_button">Update</string>
+    <string name="common_google_play_services_update_text">%1$s won\'t run unless you update Google Play services.</string>
+    <string name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_google_play_services_updating_text">%1$s won\'t run without Google Play services, which are currently updating.</string>
+    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="communityapp">Community App</string>
+    <string name="confirmDonation">Confirm Donation</string>
+    <string name="contact">સંપર્ક</string>
+    <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
+    <string name="crop_image_activity_title" />
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="default_web_client_id">729348045880-0kq7tdcucp0bu0d2tko9h0k7pj2idpi5.apps.googleusercontent.com</string>
+    <string name="education">એજ્યુકેશન</string>
+    <string name="education_category">એજ્યુકેશન કેટેગરી</string>
+    <string name="email">ઇમેઇલ</string>
+    <string name="fab_transformation_scrim_behavior">android.support.design.transformation.FabTransformationScrimBehavior</string>
+    <string name="fab_transformation_sheet_behavior">android.support.design.transformation.FabTransformationSheetBehavior</string>
+    <string name="facebook">ફેસબુક</string>
+    <string name="familydirecotry">ફેમિલી ડિરેક્ટરી</string>
+    <string name="familymember">ફેમિલી મેમ્બર</string>
+    <string name="favourite">ફેવરિટ</string>
+    <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
+    <string name="feedback">ફીડ બેક</string>
+    <string name="firebase_database_url">https://kathirajgor-71b86.firebaseio.com</string>
+    <string name="founder_andmin">ફાઉન્ડર/એડમીન</string>
+    <string name="frame_rate_value_with_unit">%d fps</string>
+    <string name="gallery">ગેલેરી</string>
+    <string name="gam">ગામ</string>
+    <string name="gcm_defaultSenderId">729348045880</string>
+    <string name="google_api_key">AIzaSyD9eskFAmTEGgksjAHp3Z1mtpLvvTf7MN0</string>
+    <string name="google_app_id">1:729348045880:android:443c34db0bf90ad8</string>
+    <string name="google_crash_reporting_api_key">AIzaSyD9eskFAmTEGgksjAHp3Z1mtpLvvTf7MN0</string>
+    <string name="google_storage_bucket">kathirajgor-71b86.appspot.com</string>
+    <string name="gotra">ગોત્ર</string>
+    <string name="hide_bottom_view_on_scroll_behavior">android.support.design.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="income">આવક</string>
+    <string name="janmsthal">જન્મ સ્થળ</string>
+    <string name="janmtarikh">જન્મ તારિખ</string>
+    <string name="janmtime">જન્મ ટાઈમ</string>
+    <string name="jati">જાતિ</string>
+    <string name="kayamisarnamu">કાયમી સરનામું</string>
+    <string name="koikhotkhapan">કોઈ ખોટ ખાંપણ</string>
+    <string name="label_audience">Show Video</string>
+    <string name="label_broadcaster">Broadcaster</string>
+    <string name="label_confirm">Confirm</string>
+    <string name="label_settings">Settings</string>
+    <string name="label_title_bit_rate">Bit Rate\10(kbps)</string>
+    <string name="label_title_frame_rate">Frame Rate\10(fps)</string>
+    <string name="label_title_resolution">Resolution\10(Width * Height)</string>
+    <string name="live">લાઈવ</string>
+    <string name="maliknunam">વ્યક્તિ નું નામ</string>
+    <string name="matanovaysai">માતા નો વ્યવસાય</string>
+    <string name="matanunam">માતા નું નામ</string>
+    <string name="member">મેમ્બર</string>
+    <string name="milkat">મિલકત</string>
+    <string name="mobile">મોબાઈલ</string>
+    <string name="mosad">મોસાળ</string>
+    <string name="msg_choose_role">Would you like to be the broadcaster or an audience?</string>
+    <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
+    <string name="mudvatan">મૂળ વતન</string>
+    <string name="nam">નામ</string>
+    <string name="name">નામ</string>
+    <string name="need">જરૂરીયાત</string>
+    <string name="news">ન્યૂઝ</string>
+    <string name="openDrawer">Navigation View Closed</string>
+    <string name="parivarnasahbhay">પરિવાર ના સભ્ય</string>
+    <string name="password_toggle_content_description">Show password</string>
+    <string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
+    <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+    <string name="paymentMethod">Payment Method</string>
+    <string name="pedhinunam">પેઢી/સંસ્થા નું નામ</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="pitanovaysai">પિતા નો વ્યવસાય</string>
+    <string name="pitanunam">પિતા નું નામ</string>
+    <string name="private_app_id">9ac3f7772c07490d9fa56c31504e9615</string>
+    <string name="project_id">kathirajgor-71b86</string>
+    <string name="raktjuth">રક્ત જૂથ</string>
+    <string name="read_less">show less</string>
+    <string name="read_more">show more</string>
+    <string name="register">રજીસ્ટર</string>
+    <string name="sahitaya">રાજગોર ની વૈવિધ્યતા</string>
+    <string name="sangh_ganti">સંઘ અને જ્ઞાતિ ગ્રુપ</string>
+    <string name="sarname">સરનેમ</string>
+    <string name="sarnamu">સરનામું</string>
+    <string name="search_menu_title">Search</string>
+    <string name="selectcity">સિલેક્ટ સિટી</string>
+    <string name="selectheight">સિલેક્ટ ઉંચાઈ</string>
+    <string name="selecttarikh">સિલેક્ટ તારીખ</string>
+    <string name="selectumar">સિલેક્ટ ઉમર</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="supporter">સપોર્ટર અને ટીમ</string>
+    <string name="supporter_title">સપોર્ટર</string>
+    <string name="swav">સ્વ.</string>
+    <string name="tarikh">તારીખ</string>
+    <string name="team">ટીમ</string>
+    <string name="telegram">ટેલિગ્રામ</string>
+    <string name="termscondition">Terms And Condition</string>
+    <string name="uchai">ઉંચાઈ</string>
+    <string name="umar">ઉમર</string>
+    <string name="uploadby">અપલોડ બાય</string>
+    <string name="vadhuvigat">વધુ વિગત</string>
+    <string name="vaivahiksthiti">વૈવાહિક સ્થિતિ</string>
+    <string name="vaivahitsthiti">વ્યવસાય ની સ્થિતિ</string>
+    <string name="vajan">વજન</string>
+    <string name="validate">Validate</string>
+    <string name="vaysay">વ્યવસાય</string>
+    <string name="vaysaynivigat">વ્યવસાય ની વિગત</string>
+    <string name="vaysaynusarnamu">વ્યવસાય નું સરનામું</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="verification_code_subtext">Please type the verification code sent to +xxxxxxxxxx</string>
+    <string name="welcometext">Welcome To Kathi Rajgor</string>
+    <string name="whatsapp">વ્હોટ્સએપ</string>
+    <string name="check_your_data_connection">Check Your Data\nConnection.!</string>
+    <string name="no_internet_connection_available_on_your_device">No Internet Connection Available\nOn Your Device.</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="exit">EXIT</string>
+    <string name="turn_on_data">TURN ON DATA</string>
+    <string name="something_went_wrong">Something went wrong</string>
+</resources>

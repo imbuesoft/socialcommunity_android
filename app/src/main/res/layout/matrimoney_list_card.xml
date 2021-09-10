@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/android_card_view_example"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:elevation="4dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/matrimoney_image"
+            android:layout_width="90dp"
+            android:layout_height="110dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="18dp"
+            tools:src="@drawable/girl1" />
+
+        <TextView
+            android:id="@+id/matrimoney_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/matrimoney_image"
+            android:paddingBottom="5dp"
+            android:text="Hetal Parmar"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/short_description"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/matrimoney_list_title"
+            android:layout_toRightOf="@+id/matrimoney_image"
+            android:text="23 Years, 5'2, 45kgs,\nBCA, MCA \nRajkot "
+            android:textColor="#8b8b8b" />
+
+        <ImageView
+            android:id="@+id/matrimoney_list_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/matrimoney_image"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/get_view" />
+
+        <ImageView
+            android:id="@+id/matrimoney_list_like"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/matrimoney_image"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/get_like" />
+
+        <ImageView
+            android:id="@+id/matrimoney_list_fav"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/matrimoney_image"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/add_fav" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
