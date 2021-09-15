@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.0"
     defaultConfig {
         applicationId "com.prakashgujarati.khantrajputsamaj"
-        minSdkVersion 17
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -61,4 +61,8 @@ dependencies {
     //multidex
     def multidex_version = "2.0.1"
     implementation "androidx.multidex:multidex:$multidex_version"
+
+    //image picker with crop
+    implementation 'com.github.dhaval2404:imagepicker:1.8'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
 }

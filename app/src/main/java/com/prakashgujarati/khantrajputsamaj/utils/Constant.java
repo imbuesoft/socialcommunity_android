@@ -103,6 +103,7 @@ public class Constant {
         String PLACEMENT_DETAILS = "recruitment_details";
         String SPORTS_LIST = "sport_list";
         String SPORTS_DETAILS = "sport_view";
+        String NEWS_CREATE = "news_create";
     }
 
     public interface ApiKey {
@@ -113,6 +114,11 @@ public class Constant {
         String EMPLOYEE_ID = "employee_id";
         String PLACEMENT_ID = "recruitment_id";
         String SPORTS_ID = "sport_id";
+        String REFERENCE = "reference";
+        String DETAILS = "detail_report";
+        String CATEGORY = "category";
+        String TITLE = "title";
+        String HEADLINE = "headline";
     }
 
     //inreface for app type

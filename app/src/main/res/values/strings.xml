@@ -491,4 +491,6 @@
     <string name="exit">EXIT</string>
     <string name="turn_on_data">TURN ON DATA</string>
     <string name="something_went_wrong">Something went wrong</string>
+    <string name="select_thumbnail">Select Thumbnail</string>
+    <string name="select_image">Select Image</string>
 </resources>
