@@ -95,7 +95,7 @@ public class EmployeeDetails extends BaseActivity {
         requestOptions = requestOptions.transforms(new CircleCrop());
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(this)
-                .load(ApiClient.BASE_URL + "" + employeeData.getLogo())
+                .load(ApiClient.IMAGE_URL + "" + employeeData.getLogo())
                 .apply(requestOptions)
                 .into(employee_logo);
     }

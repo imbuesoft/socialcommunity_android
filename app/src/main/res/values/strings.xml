@@ -329,10 +329,16 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="expectations">અપેક્ષા </string>
+    <string name="remark">નોંધ </string>
     <string name="abhinandan">અભિનંદન</string>
     <string name="abhiyas">અભ્યાસ</string>
     <string name="address">સરનામું</string>
-
+    <string name="hobbies">શોખ </string>
+    <string name="maternal_place">મોસાળ નું વતન </string>
+    <string name="pitanomobilenumber">પિતા નો મોબાઈલ નંબર </string>
+    <string name="resident_address">ઘર નું સરનામું </string>
+    <string name="native_address">મૂળ સરનામું</string>
     <string name="atak">અટક</string>
     <string name="avasandate">અવસાન તા.</string>
     <string name="avasannondh">અવસાન નોંધ</string>
@@ -382,7 +388,7 @@
     <string name="crop_image_menu_flip_vertically">Flip vertically</string>
     <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
     <string name="crop_image_menu_rotate_right">Rotate</string>
-    <string name="default_web_client_id">729348045880-0kq7tdcucp0bu0d2tko9h0k7pj2idpi5.apps.googleusercontent.com</string>
+    <!--    <string name="default_web_client_id">729348045880-0kq7tdcucp0bu0d2tko9h0k7pj2idpi5.apps.googleusercontent.com</string>-->
     <string name="education">એજ્યુકેશન</string>
     <string name="education_category">એજ્યુકેશન કેટેગરી</string>
     <string name="email">ઇમેઇલ</string>
@@ -399,11 +405,11 @@
     <string name="frame_rate_value_with_unit">%d fps</string>
     <string name="gallery">ગેલેરી</string>
     <string name="gam">ગામ</string>
-    <string name="gcm_defaultSenderId">729348045880</string>
-    <string name="google_api_key">AIzaSyD9eskFAmTEGgksjAHp3Z1mtpLvvTf7MN0</string>
-    <string name="google_app_id">1:729348045880:android:443c34db0bf90ad8</string>
-    <string name="google_crash_reporting_api_key">AIzaSyD9eskFAmTEGgksjAHp3Z1mtpLvvTf7MN0</string>
-    <string name="google_storage_bucket">kathirajgor-71b86.appspot.com</string>
+    <!--    <string name="gcm_defaultSenderId">729348045880</string>-->
+    <!--    <string name="google_api_key">AIzaSyD9eskFAmTEGgksjAHp3Z1mtpLvvTf7MN0</string>-->
+    <!--    <string name="google_app_id">1:729348045880:android:443c34db0bf90ad8</string>-->
+    <!--    <string name="google_crash_reporting_api_key">AIzaSyD9eskFAmTEGgksjAHp3Z1mtpLvvTf7MN0</string>-->
+    <!--    <string name="google_storage_bucket">kathirajgor-71b86.appspot.com</string>-->
     <string name="gotra">ગોત્ર</string>
     <string name="hide_bottom_view_on_scroll_behavior">android.support.design.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="income">આવક</string>
@@ -448,7 +454,7 @@
     <string name="pitanovaysai">પિતા નો વ્યવસાય</string>
     <string name="pitanunam">પિતા નું નામ</string>
     <string name="private_app_id">9ac3f7772c07490d9fa56c31504e9615</string>
-    <string name="project_id">kathirajgor-71b86</string>
+    <!--    <string name="project_id">kathirajgor-71b86</string>-->
     <string name="raktjuth">રક્ત જૂથ</string>
     <string name="read_less">show less</string>
     <string name="read_more">show more</string>
@@ -491,6 +497,4 @@
     <string name="exit">EXIT</string>
     <string name="turn_on_data">TURN ON DATA</string>
     <string name="something_went_wrong">Something went wrong</string>
-    <string name="select_thumbnail">Select Thumbnail</string>
-    <string name="select_image">Select Image</string>
 </resources>

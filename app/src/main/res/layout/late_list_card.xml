@@ -18,10 +18,9 @@
             android:layout_height="100dp"
             android:layout_alignParentTop="true"
             android:layout_marginRight="18dp"
+            android:cropToPadding="true"
             android:padding="1dp"
             android:scaleType="fitCenter"
-            android:cropToPadding="true"
-            android:background="@drawable/border_image"
             android:src="@drawable/bhikhubhai_s" />
 
         <TextView
@@ -32,7 +31,31 @@
             android:layout_toRightOf="@+id/late_image"
             android:paddingBottom="5dp"
             android:text="Hetal Parmar"
-            android:textSize="20dp"
+            android:textSize="15dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/blue_800"/>
+
+        <TextView
+            android:id="@+id/late_mname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/late_name"
+            android:paddingBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Hetal Parmar"
+            android:textSize="15dp"
+            android:textColor="@color/blue_800"/>
+
+        <TextView
+            android:id="@+id/late_lname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/late_mname"
+            android:paddingBottom="5dp"
+            android:text="Hetal Parmar"
+            android:textSize="15dp"
             android:textColor="@color/blue_800"/>
 
         <TextView
@@ -44,6 +67,15 @@
             android:text="23 Years, 5'2, 45kgs,\nBCA, MCA \nRajkot "
             android:textColor="#000" />
 
+        <TextView
+            android:id="@+id/late_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/late_note"
+            android:layout_toRightOf="@+id/late_image"
+            android:layout_marginTop="5dp"
+            android:text="23 Years, 5'2, 45kgs,\nBCA, MCA \nRajkot "
+            android:textColor="#000" />
 
     </RelativeLayout>
 

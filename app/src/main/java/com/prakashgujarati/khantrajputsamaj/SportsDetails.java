@@ -1,6 +1,7 @@
 package com.prakashgujarati.khantrajputsamaj;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -80,16 +81,16 @@ public class SportsDetails extends BaseActivity {
     private void setupData() {
         title.setText(sportsData.getTitle());
         user_name.setText(sportsData.getHeadline());
-        desc.setText(sportsData.getDetail_Report());
+        desc.setText(Html.fromHtml(sportsData.getDetail_Report()));
         RequestOptions requestOptions = new RequestOptions();
         requestOptions = requestOptions.transforms(new CircleCrop());
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(this)
-                .load(ApiClient.BASE_URL + "" + sportsData.getThumbnail())
+                .load(ApiClient.IMAGE_URL + "" + sportsData.getThumbnail())
                 .apply(requestOptions)
                 .into(iv_pimg);
         Glide.with(this)
-                .load(ApiClient.BASE_URL + "" + sportsData.getThumbnail())
+                .load(ApiClient.IMAGE_URL + "" + sportsData.getThumbnail())
                 .apply(requestOptions)
                 .into(iv_img);
     }

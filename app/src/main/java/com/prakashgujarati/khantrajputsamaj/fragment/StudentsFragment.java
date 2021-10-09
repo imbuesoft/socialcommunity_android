@@ -28,7 +28,7 @@ public class StudentsFragment extends BaseFragment {
     private View view;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    //private ArrayList<SimpleItemFour> students;
+   // private ArrayList<SimpleItemFour> students;
 
     @SuppressLint("WrongConstant")
     @Override
@@ -51,14 +51,14 @@ public class StudentsFragment extends BaseFragment {
         //students.add(s1);
 
 
-        //SimpleItemFourAdapter simpleItemFourAdapter = new SimpleItemFourAdapter(getActivity(), students);
+     //   SimpleItemFourAdapter simpleItemFourAdapter = new SimpleItemFourAdapter(getActivity(), students);
 
         DividerItemDecoration divider = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
         divider.setDrawable(ContextCompat.getDrawable(getContext(), R.drawable.line_divider));
         recyclerView.addItemDecoration(divider);
 
-        //recyclerView.setAdapter(simpleItemFourAdapter);
-       // simpleItemFourAdapter.notifyDataSetChanged();
+    //    recyclerView.setAdapter(simpleItemFourAdapter);
+      //  simpleItemFourAdapter.notifyDataSetChanged();
 
         return view;
     }

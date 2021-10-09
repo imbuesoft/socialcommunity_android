@@ -8,6 +8,7 @@ import com.prakashgujarati.khantrajputsamaj.commans.BaseActivity;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.sql.SQLTransactionRollbackException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -101,9 +102,38 @@ public class Constant {
         String EMPLOYEE_DETAILS = "employee_details";
         String PLACEMENT_LIST = "recruitment_list";
         String PLACEMENT_DETAILS = "recruitment_details";
+        String EVENT_LIST = "event_list";
+        String EVENT_DETAILS = "event_view";
+        String VIDEO_DETAILS = "video_view";
+        String VIDEO_LIST = "video_list";
+        String PHOTO_LIST = "gallery_list";
+        String PHOTO_VIEW = "gallery_view";
         String SPORTS_LIST = "sport_list";
         String SPORTS_DETAILS = "sport_view";
+        String BIRTHDAY_LIST = "birthday_list";
+        String BIRTHDAY_DETAILS = "birthday_view";
+        String DONER_LIST = "doner_list";
+        String DONER_DETAILS = "doner_view";
+        String CONTACT_LIST = "contact_list";
+        String CONTACT_DETAILS = "contact_view";
+        String EVENT_CREATE = "event_create";
+        String BIRTHDAY_CREATE = "birthday_create";
+        String LATE_CREATE = "late_create";
+        String PLACEMENT_CREATE = "recruitment_create";
+        String EDUCATION_LIST = "education_list";
+        String EDUCATION_DETAILS = "education_view";
+        String EDUCATION_CREATE = "education_create";
+        String BUSNIESS_CREATE = "business_create";
+        String EMPLOYEE_CREATE = "employee_create";
+        String CANDIDATE_CREATE = "candidate_create";
         String NEWS_CREATE = "news_create";
+        String SURNAME_LIST = "surname_list";
+        String SURNAME_CREATE = "surname_create";
+        String CONTACT_CREATE = "contact_create";
+        String SPORTS_CREATE = "sport_create";
+        String DONOR_CREATE = "doner_create";
+        String PHOTO_CREATE = "gallery_update";
+        String VIDEO_CREATE = "gallery_create";
     }
 
     public interface ApiKey {
@@ -113,12 +143,73 @@ public class Constant {
         String LATE_ID = "late_id";
         String EMPLOYEE_ID = "employee_id";
         String PLACEMENT_ID = "recruitment_id";
+        String EVENT_ID = "event_id";
+        String VIDEO_ID = "video_id";
+        String PHOTO_ID = "gallery_id";
         String SPORTS_ID = "sport_id";
+        String BIRTHDAY_ID ="birthday_id" ;
+        String DONER_ID = "doner_id";
+        String CONTACT_ID = "contact_id";
         String REFERENCE = "reference";
         String DETAILS = "detail_report";
         String CATEGORY = "category";
         String TITLE = "title";
         String HEADLINE = "headline";
+        String REPORTED_DATETIME = "reported_datetime";
+        String FIRST_NAME = "first_name";
+        String MIDDLE_NAME = "middle_name";
+        String LAST_NAME = "last_name";
+        String COMPANY = "company";
+        String DESCRIPTION = "description";
+        String CONTACT = "contact";
+        String EMAIL = "email";
+        String ADDRESS = "address";
+        String OFFICE = "office";
+        String DESIGNATION = "designation";
+        String BIRTH_DATE = "birth_date";
+        String BIRTH_TIME = "birth_time";
+        String BIRTH_PLACE = "birth_place";
+        String HEIGHT = "height";
+        String WEIGHT = "weight";
+        String EDUCATION = "education";
+        String OCCUPATION = "occupation";
+        String FATHER_NAME = "father_name";
+        String MOTHER_NAME = "mother_name";
+        String BROTHERS = "brothers";
+        String SISTERS = "sisters";
+        String FATHER_OCCUPATION = "father_occupation";
+        String MOTHER_OCCUPATION = "mother_occupation";
+        String FATHER_CONTACT = "father_contact";
+        String RESIDENT_ADDRESS = "resident_address";
+        String NATIVE_ADDRESS = "native_address";
+        String MATERNAL = "maternal";
+        String MATERNAL_PLACE = "maternal_place";
+        String HOBBIES = "hobbies";
+        String EXPECTATIONS = "expectations";
+        String REMARK = "remark";
+        String EDUCATION_ID = "education_id";
+        String NAME ="name";
+        String BIRTHDATE = "birthdate";
+        String TIME = "time";
+        String PLACE = "place";
+        String WISHES = "wishes";
+        String GUJARATI_SAVANT = "gujarati_savant";
+        String LATE_DATE = "late_date";
+        String SHRADHHANJALI = "shradhhanjali";
+        String NOTIFICATION = "notifications";
+        String SKILLS = "skills";
+        String EDUCATIONAL_QUALIFICATION = "education_quailification";
+        String REFERENCE_URL = "reference_url";
+        String GENDER = "gender";
+        String QUALIFICATION = "qualification";
+        String NOTE = "note";
+        String SURNAME ="name";
+        String MOBILE = "mobile";
+        String TYPE = "type";
+        String EVENT_TITLE = "event_title";
+        String LOCATION = "location";
+        String DATE = "date";
+        String PATH = "path";
     }
 
     //inreface for app type
@@ -130,7 +221,14 @@ public class Constant {
         String LATE_ID = "late_id";
         String EMPLOYEE_ID = "employee_id";
         String PLACEMENT_ID = "recruitment_id";
+        String EVENT_ID = "event_id";
+        String VIDEO_ID = "video_id";
+        String PHOTO_ID = "gallery_id";
         String SPORTS_ID = "sport_id";
+        String BIRTHDAY_ID ="birthday_id" ;
+        String DONER_ID = "doner_id";
+        String CONTACT_ID = "contact_id";
+        String EDUCATION_ID = "education_id";
     }
 
 

@@ -6,12 +6,7 @@ public class Video {
     String subtitle;
     String description;
 
-    public Video(String image, String title, String subtitle, String description) {
-        this.image = image;
-        this.title = title;
-        this.subtitle = subtitle;
-        this.description = description;
-    }
+
 
     public String getImage() {
         return image;

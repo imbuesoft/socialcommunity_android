@@ -22,6 +22,8 @@ public class ApiClient {
 
     public static final String BASE_URL = "https://khantrajputsamaj.in/api/";
 
+    public static final String IMAGE_URL = "https://khantrajputsamaj.in";
+
     private static Retrofit retrofit = null;
 
     private static String token = "";

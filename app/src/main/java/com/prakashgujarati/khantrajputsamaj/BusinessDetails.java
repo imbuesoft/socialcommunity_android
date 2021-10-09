@@ -1,6 +1,7 @@
 package com.prakashgujarati.khantrajputsamaj;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,7 +23,7 @@ import retrofit2.Response;
 
 public class BusinessDetails extends BaseActivity {
     private ImageView iv_logo;
-    private TextView business_title,business_category,bus_web,bus_email,bus_location,bus_call;
+    private TextView business_title,business_category,bus_web,bus_call,bus_location,bus_email;
 
     private Business businessData = new Business();
 
@@ -37,10 +38,11 @@ public class BusinessDetails extends BaseActivity {
         iv_logo = findViewById(R.id.iv_logo);
         business_title = findViewById(R.id.business_title);
         business_category = findViewById(R.id.business_category);
-        bus_call = findViewById(R.id.bus_call);
         bus_web = findViewById(R.id.bus_web);
-        bus_email = findViewById(R.id.bus_email);
+        bus_call = findViewById(R.id.bus_call);
         bus_location = findViewById(R.id.bus_location);
+        bus_email = findViewById(R.id.bus_email);
+
         callBusinessDetailsApi();
 
 
@@ -100,15 +102,19 @@ public class BusinessDetails extends BaseActivity {
 
      business_title.setText(businessData.getCompany());
      business_category.setText(businessData.getCategory());
-     bus_location.setText(businessData.getAddress());
      bus_email.setText(businessData.getEmail());
+     bus_location.setText(businessData.getAddress());
      bus_call.setText(businessData.getContact());
-     bus_web.setText(businessData.getDescription());
+     bus_web.setText(Html.fromHtml(businessData.getDescription()));
+
+     /*String imageUri = "https://khantrajputsamaj.in/api/busniess_list/public/busniess_logos/1628516476Screenshot from 2021-07-15 18-19-16.png";
+     iv_logo = findViewById(R.id.iv_logo);
+     Picasso.get().load(imageUri).into(iv_logo);*/
      RequestOptions requestOptions = new RequestOptions();
      requestOptions = requestOptions.transforms(new CircleCrop());
      requestOptions.placeholder(R.drawable.ic_user);
      Glide.with(this)
-             .load(ApiClient.BASE_URL + "" + businessData.getLogo())
+             .load(ApiClient.IMAGE_URL + "" + businessData.getLogo())
              .apply(requestOptions)
              .into(iv_logo);
  }

@@ -1,17 +1,23 @@
 package com.prakashgujarati.khantrajputsamaj.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.prakashgujarati.khantrajputsamaj.Busniess_AddActivity;
 import com.prakashgujarati.khantrajputsamaj.R;
 import com.prakashgujarati.khantrajputsamaj.adapter.BusinessListAdapter;
 import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
@@ -34,6 +40,10 @@ public class BusinessFragment extends BaseFragment {
     private ArrayList<Business> businesslist = new ArrayList<>();
     private BusinessListAdapter businessListAdapter;
 
+    public void onCreate(@Nullable Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
     @SuppressLint("WrongConstant")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -102,5 +112,19 @@ public class BusinessFragment extends BaseFragment {
                 showError("Something went wrong");
             }
         });
+    }
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
+        inflater.inflate(R.menu.menu_busniess,menu);
+        super.onCreateOptionsMenu(menu,inflater);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_Busniess:
+                Intent i = new Intent(getContext(), Busniess_AddActivity.class);
+                startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

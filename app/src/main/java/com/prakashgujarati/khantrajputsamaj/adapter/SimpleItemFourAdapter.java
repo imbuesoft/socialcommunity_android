@@ -12,9 +12,14 @@ import android.widget.Toast;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.bumptech.glide.request.RequestOptions;
 import com.prakashgujarati.khantrajputsamaj.EmployeeDetails;
 import com.prakashgujarati.khantrajputsamaj.LateDetails;
 import com.prakashgujarati.khantrajputsamaj.R;
+import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
+import com.prakashgujarati.khantrajputsamaj.model.Business;
 import com.prakashgujarati.khantrajputsamaj.model.SimpleItemFour;
 import com.prakashgujarati.khantrajputsamaj.utils.Constant;
 import com.squareup.picasso.Picasso;
@@ -28,6 +33,7 @@ public class SimpleItemFourAdapter extends RecyclerView.Adapter<SimpleItemFourAd
 
     private Context context;
     private ArrayList<SimpleItemFour> simpleItemFour;
+    private SimpleItemFour employeedata = new SimpleItemFour();
     private View view;
 
     public SimpleItemFourAdapter(FragmentActivity activity, ArrayList<SimpleItemFour> simpleItemFour) {
@@ -52,6 +58,14 @@ public class SimpleItemFourAdapter extends RecyclerView.Adapter<SimpleItemFourAd
                     .transform(new CropCircleTransformation())
                     .into(holder.img);
         }
+
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions = requestOptions.transforms(new CircleCrop());
+        requestOptions.placeholder(R.drawable.ic_user);
+        Glide.with(context)
+                .load(ApiClient.IMAGE_URL + "" + employeedata.getLogo())
+                .apply(requestOptions)
+                .into(holder.img);
 
         holder.title.setText(simpleItemFour.get(position).getFirstName());
         holder.subtitle.setText(simpleItemFour.get(position).getDesignation());

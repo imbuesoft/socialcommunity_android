@@ -1,18 +1,26 @@
 package com.prakashgujarati.khantrajputsamaj.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.prakashgujarati.khantrajputsamaj.Busniess_AddActivity;
 import com.prakashgujarati.khantrajputsamaj.R;
+import com.prakashgujarati.khantrajputsamaj.Sports_Form;
 import com.prakashgujarati.khantrajputsamaj.adapter.SportsAdapter;
 import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
 import com.prakashgujarati.khantrajputsamaj.api.ApiInterface;
@@ -33,6 +41,11 @@ public class SportsFragment extends BaseFragment {
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Sports> sports = new ArrayList<>();
     private SportsAdapter sportsAdapter;
+
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
 
     @SuppressLint("WrongConstant")
     @Override
@@ -72,6 +85,7 @@ public class SportsFragment extends BaseFragment {
                         if (response.body().getResult().equalsIgnoreCase(Constant.SUCCESS_RESPONSE)) {
                             sports.clear();
                             sports.addAll(response.body().getData());
+
                             sportsAdapter.notifyDataSetChanged();
                         } else {
                             sports.clear();
@@ -93,5 +107,19 @@ public class SportsFragment extends BaseFragment {
                 showError("Something went wrong");
             }
         });
+    }
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_sports, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_Sports:
+                Intent i = new Intent(getContext(), Sports_Form.class);
+                startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

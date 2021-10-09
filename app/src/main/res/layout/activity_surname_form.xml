@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Surname_FormActivity">
+
+    <TextView
+        android:id="@+id/tv_surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Surname"
+        android:textColor="#040509"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/et_form_surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter your surname"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#030507" />
+
+    <Button
+        android:id="@+id/btn_form_submit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#0A23AC"
+        android:text="Submit"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+</LinearLayout>

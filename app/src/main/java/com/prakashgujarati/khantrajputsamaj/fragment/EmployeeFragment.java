@@ -2,8 +2,10 @@ package com.prakashgujarati.khantrajputsamaj.fragment;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -12,9 +14,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.prakashgujarati.khantrajputsamaj.Birthday_Form;
+import com.prakashgujarati.khantrajputsamaj.Employee_Form;
 import com.prakashgujarati.khantrajputsamaj.R;
 import com.prakashgujarati.khantrajputsamaj.adapter.BusinessListAdapter;
 import com.prakashgujarati.khantrajputsamaj.adapter.LateListAdapter;
@@ -46,6 +53,10 @@ public class EmployeeFragment extends BaseFragment {
 
     public EmployeeFragment() {
         // Required empty public constructor
+    }
+    public void onCreate(@Nullable Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
 
@@ -80,6 +91,21 @@ public class EmployeeFragment extends BaseFragment {
         simpleItemFourAdapter.notifyDataSetChanged();
         callEmployeeListApi();
         return view;
+    }
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
+        inflater.inflate(R.menu.employeemenu_item,menu);
+        super.onCreateOptionsMenu(menu,inflater);
+
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_employee:
+                Intent i = new Intent(getContext(), Employee_Form.class);
+                startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void callEmployeeListApi() {

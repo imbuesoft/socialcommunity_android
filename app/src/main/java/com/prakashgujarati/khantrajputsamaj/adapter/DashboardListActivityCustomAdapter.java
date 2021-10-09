@@ -3,6 +3,7 @@ package com.prakashgujarati.khantrajputsamaj.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,24 +52,30 @@ public class DashboardListActivityCustomAdapter extends RecyclerView.Adapter<Das
             public void onClick(View v) {
                 if(position ==0)
                 {
-                    Intent i = new Intent(context, WebActivity.class);
-                    i.putExtra("wTitle","RMTS & BRTS Map Rajkot");
-                    i.putExtra("wUrl","file:///android_asset/rmts_map.html");
+                    String url = "https://khantrajputsamaj.in/committe";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                  //  i.putExtra("wTitle","RMTS & BRTS Map Rajkot");
+                   // i.putExtra("wUrl","file:///android_asset/rmts_map.html");
                     context.startActivity(i);
                 }
                 else if(position ==1)
                 {
-                    Intent i = new Intent(context,WebActivity.class);
-                    i.putExtra("wTitle","How to Travel ?");
-                    i.putExtra("wUrl","https://en.wikipedia.org/wiki/Rajkot");
+                    String url = "https://khantrajputsamaj.in/contact";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                   // i.putExtra("wTitle","How to Travel ?");
+                  //  i.putExtra("wUrl","https://en.wikipedia.org/wiki/Rajkot");
                     context.startActivity(i);
 
                 }
                 else if(position ==2)
                 {
-                    Intent i = new Intent(context,WebActivity.class);
-                    i.putExtra("wTitle","Popular Places");
-                    i.putExtra("wUrl","https://wikitravel.org/en/Rajkot");
+                    String url = "https://en.wikipedia.org/wiki/Khant_Koli";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                   // i.putExtra("wTitle","Popular Places");
+                  //  i.putExtra("wUrl","https://wikitravel.org/en/Rajkot");
                     context.startActivity(i);
                 }
                 else if(position ==3)

@@ -12,12 +12,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.prakashgujarati.khantrajputsamaj.MainActivity;
 import com.prakashgujarati.khantrajputsamaj.fragment.AnniversaryFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.BirthdayFragment;
 import com.prakashgujarati.khantrajputsamaj.fragment.BookList;
 import com.prakashgujarati.khantrajputsamaj.fragment.BusinessFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.ContactFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.DonerFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.EducationFragment;
 import com.prakashgujarati.khantrajputsamaj.fragment.EmployeeFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.EventFragment;
 import com.prakashgujarati.khantrajputsamaj.fragment.LateFragment;
 import com.prakashgujarati.khantrajputsamaj.fragment.MatrimoneyFragment;
 import com.prakashgujarati.khantrajputsamaj.fragment.NewsFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.PhotoListFragment;
 import com.prakashgujarati.khantrajputsamaj.fragment.PlacementFragment;
 import com.prakashgujarati.khantrajputsamaj.fragment.SportsFragment;
 import com.prakashgujarati.khantrajputsamaj.fragment.StudentsFragment;
@@ -58,8 +64,9 @@ public class DashboardGridActivityCustomAdapter extends RecyclerView.Adapter<Das
             public void onClick(View v) {
                 if(position == 0)
                 {
-                    ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new AnniversaryFragment()).commit();
-                }else if(position == 1)
+                    ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new BirthdayFragment()).commit();
+                }
+                else if(position == 1)
                 {
                     ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new MatrimoneyFragment()).commit();
                 }
@@ -81,7 +88,7 @@ public class DashboardGridActivityCustomAdapter extends RecyclerView.Adapter<Das
                 }
                 else if(position == 6)
                 {
-                    ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new StudentsFragment()).commit();
+                    ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new EducationFragment()).commit();
                 }
                 else if(position == 7)
                 {
@@ -95,6 +102,18 @@ public class DashboardGridActivityCustomAdapter extends RecyclerView.Adapter<Das
                 {
                     ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new BookList()).commit();
                 }
+                else if(position == 10)
+                {
+                    ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new EventFragment()).commit();
+                }
+                else if(position == 11)
+                {
+                    ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new DonerFragment()).commit();
+                }
+                else if(position == 12)
+                {
+                    ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new PhotoListFragment()).commit();
+                }
                 else if(position == 13)
                 {
                     ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new VideoListFragment()).commit();
@@ -102,6 +121,10 @@ public class DashboardGridActivityCustomAdapter extends RecyclerView.Adapter<Das
                 else if(position == 14)
                 {
                     ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new SurnameFragment()).commit();
+                }
+                else if(position == 15)
+                {
+                    ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_home, new ContactFragment()).commit();
                 }
             }
         });

@@ -1,3 +1,4 @@
+
 package com.prakashgujarati.khantrajputsamaj.model;
 
 import com.google.gson.annotations.Expose;

@@ -2,10 +2,12 @@ package com.prakashgujarati.khantrajputsamaj.fragment;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -16,14 +18,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.TypedValue;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.prakashgujarati.khantrajputsamaj.Contact_Form;
+import com.prakashgujarati.khantrajputsamaj.Magazine_Form;
 import com.prakashgujarati.khantrajputsamaj.R;
 import com.prakashgujarati.khantrajputsamaj.adapter.BookListAdapter;
 import com.prakashgujarati.khantrajputsamaj.adapter.NewsListAdapter;
 import com.prakashgujarati.khantrajputsamaj.commans.BaseFragment;
+import com.prakashgujarati.khantrajputsamaj.model.Book;
 import com.prakashgujarati.khantrajputsamaj.model.News;
+import com.prakashgujarati.khantrajputsamaj.model.SimpleItem;
 import com.prakashgujarati.khantrajputsamaj.model.SimpleItemFour;
 
 import java.util.ArrayList;
@@ -36,8 +45,13 @@ public class BookList extends BaseFragment {
     private View view;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<com.prakashgujarati.khantrajputsamaj.model.BookList> bookLists;
+    private ArrayList<Book> books = new ArrayList<>();
+    private BookListAdapter bookListAdapter;
 
+    public void onCreate(@Nullable Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
     @SuppressLint("WrongConstant")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,25 +60,16 @@ public class BookList extends BaseFragment {
         view = inflater.inflate(R.layout.fragment_late, container, false);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.late_recycleview);
-
-
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
 
+         Book n1 = new Book("","Dharamwani", "March 2020", "");
 
+         books = new ArrayList<Book>();
+         books.add(n1);
+         books.add(n1);
 
-        // SimpleItemFour n1 = new SimpleItemFour("","Dharamwani", "March 2020", "");
-
-        // books = new ArrayList<SimpleItemFour>();
-        // books.add(n1);
-        // books.add(n1);
-
-        BookListAdapter bookListAdapter = new BookListAdapter(getActivity(),bookLists);
-
-
-        /* DividerItemDecoration divider = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
-        divider.setDrawable(ContextCompat.getDrawable(getContext(), R.drawable.line_divider));
-        recyclerView.addItemDecoration(divider);*/
+        bookListAdapter = new BookListAdapter(getActivity(),books);
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 3);
         recyclerView.setLayoutManager(mLayoutManager);
@@ -73,10 +78,6 @@ public class BookList extends BaseFragment {
         recyclerView.setAdapter(bookListAdapter);
         recyclerView.setNestedScrollingEnabled(false);
         bookListAdapter.notifyDataSetChanged();
-
-
-
-
         return view;
     }
 
@@ -121,6 +122,19 @@ public class BookList extends BaseFragment {
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
+        inflater.inflate(R.menu.menu_magazin,menu);
+        super.onCreateOptionsMenu(menu,inflater);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_Magazine:
+                Intent i = new Intent(getContext(), Magazine_Form.class);
+                startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

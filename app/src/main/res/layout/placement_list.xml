@@ -7,15 +7,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:background="#fff"
-        android:padding="10dp">
+        android:layout_height="150dp"
+        android:background="#fff">
 
         <TextView
             android:id="@+id/placement_title"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:text="Lorem Ipsum Dolor Amet, Consectetur Adipiscing Elit Ipsum Dolor Amet"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -24,8 +24,9 @@
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/placement_title"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form..."
+
             android:textSize="14dp" />
 
         <TextView
@@ -34,7 +35,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/placement_description"
             android:layout_marginTop="10dp"
-            android:text="30 min ago"
             android:textSize="12dp"
             android:textStyle="bold" />
 
@@ -42,10 +42,10 @@
             android:id="@+id/placement_image"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="247dp"
+            android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/placement_time"
-            android:scaleType="centerCrop"
-            android:src="@drawable/khantrajput_logo" />
+            android:scaleType="fitCenter" />
 
     </RelativeLayout>
 

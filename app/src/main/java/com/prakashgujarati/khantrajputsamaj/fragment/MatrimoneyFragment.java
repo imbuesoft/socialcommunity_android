@@ -2,8 +2,10 @@ package com.prakashgujarati.khantrajputsamaj.fragment;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -12,9 +14,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.prakashgujarati.khantrajputsamaj.Candidate_Form;
+import com.prakashgujarati.khantrajputsamaj.Contact_Form;
 import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
 import com.prakashgujarati.khantrajputsamaj.api.ApiInterface;
 import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseCandidate;
@@ -45,6 +53,11 @@ public class MatrimoneyFragment extends BaseFragment {
 
     public MatrimoneyFragment() {
         // Required empty public constructor
+    }
+
+    public void onCreate(@Nullable Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
 
@@ -107,6 +120,19 @@ public class MatrimoneyFragment extends BaseFragment {
                 showError("Something went wrong");
             }
         });
+    }
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
+        inflater.inflate(R.menu.candidatemenu_item,menu);
+        super.onCreateOptionsMenu(menu,inflater);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_Candidate:
+                Intent i = new Intent(getContext(), Candidate_Form.class);
+                startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

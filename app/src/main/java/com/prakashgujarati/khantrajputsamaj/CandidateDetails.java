@@ -21,7 +21,6 @@ import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseCandidate;
 import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseCandidateDetails;
 import com.prakashgujarati.khantrajputsamaj.commans.BaseActivity;
 import com.prakashgujarati.khantrajputsamaj.model.Candidate;
-import com.prakashgujarati.khantrajputsamaj.model.CandidateData;
 import com.prakashgujarati.khantrajputsamaj.utils.Constant;
 
 import java.util.ArrayList;
@@ -32,7 +31,8 @@ import retrofit2.Response;
 
 public class CandidateDetails extends BaseActivity {
     private ImageView ivProfiledetailPic;
-    private TextView tvProfiledetailName;
+    private TextView tvProfiledetailName,tvname,tvsurname,tvfathername,tvmiddlename,tvbirthdate,tvbirthplace,tveducation,tvbusiness,tvheight,tvweight,tvmothername,tvbrothers,
+            tvsisters,tvfatherbusiness,tvmotherbusniess,tvfathernumber,tvcontact,tvemail,tvresidentaddress,tvnativeaddress,tvmaternal,tvmaternalplace,tvremark,tvhobbies,tvexcept;
 
     private Candidate candidateData = new Candidate();
 
@@ -47,7 +47,31 @@ public class CandidateDetails extends BaseActivity {
 
         ivProfiledetailPic = findViewById(R.id.iv_profiledetail_pic);
         tvProfiledetailName = findViewById(R.id.tv_profiledetail_name);
-
+        tvname = findViewById(R.id.tvName);
+        tvsurname = findViewById(R.id.tvSurName);
+        tvfathername = findViewById(R.id.tvfathername);
+        tvmiddlename = findViewById(R.id.tvPitanuName);
+        tvbirthdate = findViewById(R.id.tvbirthdate);
+        tvbirthplace = findViewById(R.id.tvJanmStahl);
+        tveducation = findViewById(R.id.tvEducation);
+        tvbusiness = findViewById(R.id.tvBusniess);
+        tvheight = findViewById(R.id.tvHeight);
+        tvweight = findViewById(R.id.tvWeight);
+        tvmothername = findViewById(R.id.tvmatanunam);
+        tvbrothers = findViewById(R.id.tvbhai);
+        tvsisters = findViewById(R.id.tvbahen);
+        tvfatherbusiness = findViewById(R.id.tvpitanovaysai);
+        tvmotherbusniess = findViewById(R.id.tvmatanovaysai);
+        tvfathernumber = findViewById(R.id.tvpitanomobilenumber);
+        tvcontact = findViewById(R.id.tvcontact);
+        tvemail = findViewById(R.id.tvemail);
+        tvresidentaddress = findViewById(R.id.tvresidentaddress);
+        tvnativeaddress = findViewById(R.id.tvnativeaddress);
+        tvmaternal = findViewById(R.id.tvmosad);
+        tvmaternalplace = findViewById(R.id.tvmaternal_place);
+        tvremark = findViewById(R.id.tvremark);
+        tvhobbies = findViewById(R.id.tvhobbies);
+        tvexcept = findViewById(R.id.tvexpectations);
         callCandidateDetailsApi();
     }
 
@@ -93,14 +117,37 @@ public class CandidateDetails extends BaseActivity {
     private void setupData() {
 
         tvProfiledetailName.setText(candidateData.getFirstName() + " " + candidateData.getLastName());
-
+        tvname.setText(candidateData.getFirstName());
+        tvsurname.setText(candidateData.getLastName());
+        tvfathername.setText(candidateData.getFatherName());
+        tvmiddlename.setText(candidateData.getMiddleName());
+        tvbirthdate.setText(candidateData.getBirthDate());
+        tvbirthplace.setText(candidateData.getBirthPlace());
+        tveducation.setText(candidateData.getEducation());
+        tvbusiness.setText(candidateData.getOccupation());
+        tvheight.setText(candidateData.getHeight());
+        tvweight.setText(candidateData.getWeight());
+        tvmothername.setText(candidateData.getMotherName());
+        tvbrothers.setText(String.valueOf(candidateData.getBrothers()));
+        tvsisters.setText(String.valueOf(candidateData.getSisters()));
+        tvfatherbusiness.setText(candidateData.getFatherOccupation());
+        tvmotherbusniess.setText(candidateData.getMotherOccupation());
+        tvfathernumber.setText(candidateData.getFatherContact());
+        tvcontact.setText(candidateData.getContact());
+        tvemail.setText(candidateData.getEmail());
+        tvresidentaddress.setText(candidateData.getResidentAddress());
+        tvnativeaddress.setText(candidateData.getNativeAddress());
+        tvmaternal.setText(candidateData.getMaternal());
+        tvmaternalplace.setText(candidateData.getMaternalPlace());
+        tvhobbies.setText(candidateData.getHobbies());
+        tvexcept.setText(candidateData.getExpectations());
+        tvremark.setText(candidateData.getRemark());
         RequestOptions requestOptions = new RequestOptions();
         requestOptions = requestOptions.transforms(new CircleCrop());
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(this)
-                .load(ApiClient.BASE_URL + "" + candidateData.getPicture())
+                .load(ApiClient.IMAGE_URL + "" + candidateData.getPicture())
                 .apply(requestOptions)
                 .into(ivProfiledetailPic);
     }
-
 }

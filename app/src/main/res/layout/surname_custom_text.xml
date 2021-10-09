@@ -6,6 +6,7 @@
     android:background="@color/grey_200"
     android:padding="8dp"
     >
+
     <TextView
         android:id="@+id/tvIcon"
         android:layout_width="40dp"

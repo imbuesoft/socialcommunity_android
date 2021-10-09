@@ -1,23 +1,27 @@
 package com.prakashgujarati.khantrajputsamaj.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.prakashgujarati.khantrajputsamaj.Late_Form;
 import com.prakashgujarati.khantrajputsamaj.R;
 import com.prakashgujarati.khantrajputsamaj.adapter.LateListAdapter;
 import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
 import com.prakashgujarati.khantrajputsamaj.api.ApiInterface;
-import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseBusiness;
 import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseLate;
 import com.prakashgujarati.khantrajputsamaj.commans.BaseFragment;
 import com.prakashgujarati.khantrajputsamaj.model.Late;
@@ -35,6 +39,11 @@ public class LateFragment extends BaseFragment {
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Late> lates = new ArrayList<>();
     private LateListAdapter lateListAdapter;
+
+    public void onCreate(@Nullable Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
 
     @SuppressLint("WrongConstant")
     @Override
@@ -104,6 +113,20 @@ public class LateFragment extends BaseFragment {
                 showError("Something went wrong");
             }
         });
+    }
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
+        inflater.inflate(R.menu.menu_late,menu);
+        super.onCreateOptionsMenu(menu,inflater);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_Late:
+                Intent i = new Intent(getContext(), Late_Form.class);
+                startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
 

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "172799384781",
+    "project_id": "khantrajputsamaj-8ae4e",
+    "storage_bucket": "khantrajputsamaj-8ae4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172799384781:android:6744da58821723ffc9dd84",
+        "android_client_info": {
+          "package_name": "com.prakashgujarati.khantrajputsamaj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172799384781-1aqgo0lg8cagud8g2c28lichkbroet76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvt74ww01ChbU4jU6pm8lVIdOAaB7IRsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172799384781-1aqgo0lg8cagud8g2c28lichkbroet76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

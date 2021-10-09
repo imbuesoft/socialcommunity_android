@@ -1,5 +1,6 @@
 package com.prakashgujarati.khantrajputsamaj;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.core.view.GravityCompat;
@@ -9,7 +10,24 @@ import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 import com.prakashgujarati.khantrajputsamaj.commans.BaseActivity;
+import com.prakashgujarati.khantrajputsamaj.fragment.AnniversaryFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.BirthdayFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.BookList;
+import com.prakashgujarati.khantrajputsamaj.fragment.BusinessFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.ContactFragment;
 import com.prakashgujarati.khantrajputsamaj.fragment.DashboardFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.DonerFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.EducationFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.EmployeeFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.EventFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.LateFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.MatrimoneyFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.NewsFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.PhotoListFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.PlacementFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.SportsFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.SurnameFragment;
+import com.prakashgujarati.khantrajputsamaj.fragment.VideoListFragment;
 import com.prakashgujarati.khantrajputsamaj.utils.Constant;
 import com.prakashgujarati.khantrajputsamaj.utils.PreferenceUtils;
 
@@ -17,6 +35,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.widget.Toast;
@@ -99,16 +119,87 @@ public class MainActivity extends BaseActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        }
 
-        } else if (id == R.id.nav_slideshow) {
+        else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_tools) {
+        }
+        else if (id == R.id.nav_birthday) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new BirthdayFragment()).commit();
+        }
+        else if (id == R.id.nav_candidate) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new MatrimoneyFragment()).commit();
+        }
+        else if (id == R.id.nav_news) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new NewsFragment()).commit();
+        }
+        else if (id == R.id.nav_late) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new LateFragment()).commit();
+        }
+        else if (id == R.id.nav_business) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new BusinessFragment()).commit();
+        }
+        else if (id == R.id.nav_employee) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new EmployeeFragment()).commit();
+        }
+        else if (id == R.id.nav_education) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new EducationFragment()).commit();
+        }
+        else if (id == R.id.nav_recruitment) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new PlacementFragment()).commit();
+        }
+        else if (id == R.id.nav_sport) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new SportsFragment()).commit();
+        }else if (id == R.id.nav_magazine) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new BookList()).commit();
+        }else if (id == R.id.nav_event) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new EventFragment()).commit();
+        }else if (id == R.id.nav_donor) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new DonerFragment()).commit();
+        }else if (id == R.id.nav_photogallery) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new PhotoListFragment()).commit();
+        }
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        else if (id == R.id.nav_videogallery) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new VideoListFragment()).commit();
+        }
+        else if (id == R.id.nav_surname) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new SurnameFragment()).commit();
+        }
+        else if (id == R.id.nav_contact) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_home, new ContactFragment()).commit();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

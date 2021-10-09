@@ -22,6 +22,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.util.Log;
 
+import com.bumptech.glide.Glide;
 import com.prakashgujarati.khantrajputsamaj.R;
 
 import java.util.LinkedList;
@@ -38,6 +39,7 @@ public final class LoadBitmapTask implements Runnable {
 
     private final static String TAG = "LoadBitmapTask";
     private static LoadBitmapTask __object;
+    Context c;
 
     final static int SMALL_BG = 0;
     final static int MEDIUM_BG = 1;
@@ -74,6 +76,7 @@ public final class LoadBitmapTask implements Runnable {
      * @param context Android context
      */
     private LoadBitmapTask(Context context) {
+        c = context;
         mResources = context.getResources();
         mBGRandom = new Random();
         mBGSizeIndex = SMALL_BG;
@@ -221,6 +224,7 @@ public final class LoadBitmapTask implements Runnable {
         mPreRandomNo = newNo;
         int resId = mPortraitBGs[mBGSizeIndex][newNo];
         Bitmap b = BitmapFactory.decodeResource(mResources, resId);
+        //Glide.with(c).asBitmap().load().get();
         if (mIsLandscape) {
             Matrix matrix = new Matrix();
             matrix.postRotate(90);

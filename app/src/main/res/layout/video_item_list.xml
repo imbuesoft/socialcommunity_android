@@ -47,7 +47,6 @@
             android:id="@+id/videolist_item_author"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/late_name"
             android:layout_alignParentTop="true"
             android:layout_marginTop="2dp"
             android:layout_toRightOf="@+id/videolist_item_image"

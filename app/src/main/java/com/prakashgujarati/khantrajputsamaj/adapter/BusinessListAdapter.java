@@ -42,16 +42,16 @@ public class BusinessListAdapter extends RecyclerView.Adapter<BusinessListAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.company.setText(business.get(position).getCompany());
+        holder.category.setText(business.get(position).getCategory());
+        holder.address.setText(business.get(position).getAddress());
         RequestOptions requestOptions = new RequestOptions();
         requestOptions = requestOptions.transforms(new CircleCrop());
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(context)
-                .load(ApiClient.BASE_URL + "" + businessdata.getLogo())
+                .load(ApiClient.IMAGE_URL + "" + businessdata.getLogo())
                 .apply(requestOptions)
                 .into(holder.img);
-        holder.company.setText(business.get(position).getCompany());
-        holder.category.setText(business.get(position).getCategory());
-        holder.address.setText(business.get(position).getAddress());
        /* holder.vanue.setText(business.get(position).getVanue());
         holder.description.setText(business.get(position).getDescription());
         holder.type.setText(business.get(position).getType());*/

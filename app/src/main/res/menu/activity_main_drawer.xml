@@ -9,17 +9,69 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_birthday"
+            android:icon="@mipmap/congratulation"
+            android:title="Birthday" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_candidate"
+            android:icon="@mipmap/matrimonial"
+            android:title="Candidate" />
         <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:id="@+id/nav_news"
+            android:icon="@mipmap/news"
+            android:title="News" />
+        <item
+            android:id="@+id/nav_late"
+            android:icon="@mipmap/late"
+            android:title="Late" />
+        <item
+            android:id="@+id/nav_business"
+            android:icon="@mipmap/business"
+            android:title="Business" />
+        <item
+            android:id="@+id/nav_employee"
+            android:icon="@mipmap/employee"
+            android:title="Employee" />
+        <item
+            android:id="@+id/nav_education"
+            android:icon="@mipmap/education"
+            android:title="Education" />
+        <item
+            android:id="@+id/nav_recruitment"
+            android:icon="@mipmap/job"
+            android:title="Recruitment" />
+        <item
+            android:id="@+id/nav_sport"
+            android:icon="@mipmap/supporter"
+            android:title="Sport" />
+        <item
+            android:id="@+id/nav_magazine"
+            android:icon="@mipmap/magazine"
+            android:title="Magazine" />
+        <item
+            android:id="@+id/nav_event"
+            android:icon="@mipmap/event"
+            android:title="Event" />
+        <item
+            android:id="@+id/nav_donor"
+            android:icon="@mipmap/donate"
+            android:title="Donor" />
+        <item
+            android:id="@+id/nav_photogallery"
+            android:icon="@mipmap/imagegallery"
+            android:title="Photo Gallery" />
+        <item
+            android:id="@+id/nav_videogallery"
+            android:icon="@mipmap/videogallery"
+            android:title="Video Gallery" />
+        <item
+            android:id="@+id/nav_surname"
+            android:icon="@mipmap/surname"
+            android:title="Surname" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@mipmap/contact"
+            android:title="Contact" />
     </group>
 
     <item android:title="Communicate">
@@ -28,10 +80,6 @@
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/menu_share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
         </menu>
     </item>
 

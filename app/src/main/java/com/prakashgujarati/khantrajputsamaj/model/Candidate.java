@@ -60,7 +60,7 @@ public class Candidate {
     private String motherOccupation;
     @SerializedName("father_contact")
     @Expose
-    private Long fatherContact;
+    private String fatherContact;
     @SerializedName("contact")
     @Expose
     private String contact;
@@ -248,11 +248,11 @@ public class Candidate {
         this.motherOccupation = motherOccupation;
     }
 
-    public Long getFatherContact() {
+    public String getFatherContact() {
         return fatherContact;
     }
 
-    public void setFatherContact(Long fatherContact) {
+    public void setFatherContact(String fatherContact) {
         this.fatherContact = fatherContact;
     }
 

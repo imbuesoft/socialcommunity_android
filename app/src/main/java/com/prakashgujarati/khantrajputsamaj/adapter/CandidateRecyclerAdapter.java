@@ -27,6 +27,7 @@ public class CandidateRecyclerAdapter extends RecyclerView.Adapter<CandidateRecy
 
     private Context context;
     private ArrayList<Candidate> items;
+    private  Candidate candidatedata = new Candidate();
     private View view;
 
     public CandidateRecyclerAdapter(FragmentActivity activity, ArrayList<Candidate> items) {
@@ -55,7 +56,7 @@ public class CandidateRecyclerAdapter extends RecyclerView.Adapter<CandidateRecy
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(context)
-                .load(ApiClient.BASE_URL + "" + items.get(position).getPicture())
+                .load(ApiClient.IMAGE_URL + "" + items.get(position).getPicture())
                 .apply(requestOptions)
                 .into(holder.img);
 
@@ -79,18 +80,18 @@ public class CandidateRecyclerAdapter extends RecyclerView.Adapter<CandidateRecy
         private ImageView img;
         private TextView name;
         private TextView description;
-        private ImageView getview;
+      /*  private ImageView getview;
         private ImageView getlike;
-        private ImageView getfav;
+        private ImageView getfav;*/
 
         public ViewHolder(View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.matrimoney_image);
             name = itemView.findViewById(R.id.matrimoney_list_title);
             description = itemView.findViewById(R.id.short_description);
-            getview = itemView.findViewById(R.id.matrimoney_list_view);
+           /* getview = itemView.findViewById(R.id.matrimoney_list_view);
             getlike = itemView.findViewById(R.id.matrimoney_list_like);
-            getfav = itemView.findViewById(R.id.matrimoney_list_fav);
+            getfav = itemView.findViewById(R.id.matrimoney_list_fav);*/
         }
     }
 }

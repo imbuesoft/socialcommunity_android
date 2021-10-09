@@ -4,26 +4,37 @@ package com.prakashgujarati.khantrajputsamaj.fragment;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.prakashgujarati.khantrajputsamaj.Activity_AddSurname;
 import com.prakashgujarati.khantrajputsamaj.R;
+import com.prakashgujarati.khantrajputsamaj.Surname_FormActivity;
 import com.prakashgujarati.khantrajputsamaj.adapter.SurnameListAdapter;
+import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
+import com.prakashgujarati.khantrajputsamaj.api.ApiInterface;
+import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseSurname;
 import com.prakashgujarati.khantrajputsamaj.commans.BaseFragment;
+import com.prakashgujarati.khantrajputsamaj.model.Surname;
+import com.prakashgujarati.khantrajputsamaj.utils.Constant;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 /**
@@ -34,15 +45,13 @@ public class SurnameFragment extends BaseFragment {
     private View view;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<String> surnames;
-    private TextView alphabet, lbl_text;
+    private ArrayList<Surname> surnames = new ArrayList<>();
+    private SurnameListAdapter surnameListAdapter;
 
     public SurnameFragment() {
         // Required empty public constructor
     }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
     }
@@ -59,35 +68,69 @@ public class SurnameFragment extends BaseFragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
 
-        surnames = new ArrayList<String>();
+        surnameListAdapter = new SurnameListAdapter(getActivity(), surnames);
 
-        surnames.add("Gujarati");
-        surnames.add("Gohel");
-        surnames.add("Lalakiya");
-        surnames.add("Makwana");
-        surnames.add("Sarvaiya");
-        surnames.add("Solanki");
-        surnames.add("Zala");
+        DividerItemDecoration divider = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
+        divider.setDrawable(ContextCompat.getDrawable(getContext(), R.drawable.line_divider));
+        recyclerView.addItemDecoration(divider);
 
-        SurnameListAdapter surnameListAdapter = new SurnameListAdapter(getActivity(), surnames);
         recyclerView.setAdapter(surnameListAdapter);
         surnameListAdapter.notifyDataSetChanged();
-        return inflater.inflate(R.layout.surname_custom_text,container,false);
-        //return view;
+        callSurnamesListApi();
+        return view;
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.activity_surname, menu);
-        super.onCreateOptionsMenu(menu, inflater);
+
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
+        inflater.inflate(R.menu.menu_item,menu);
+        super.onCreateOptionsMenu(menu,inflater);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.action_surname:
-                Intent i = new Intent(getContext(), Activity_AddSurname.class);
+                Intent i = new Intent(getContext(), Surname_FormActivity.class);
                 startActivity(i);
         }
         return super.onOptionsItemSelected(item);
     }
+
+    private void callSurnamesListApi() {
+
+        showLoader();
+        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+        Call<MainResponseSurname> call = apiService.getSurnameListResponse();
+        call.enqueue(new Callback<MainResponseSurname>() {
+            @Override
+            public void onResponse(Call<MainResponseSurname> call, Response<MainResponseSurname> response) {
+                hideLoader();
+                try {
+                    if (response.code() == 200) {
+                        if (response.body().getResult().equalsIgnoreCase(Constant.SUCCESS_RESPONSE)) {
+                            surnames.clear();
+                            surnames.addAll(response.body().getData());
+                            surnameListAdapter.notifyDataSetChanged();
+                        } else {
+                            surnames.clear();
+                            surnameListAdapter.notifyDataSetChanged();
+                            showError(response.body().getMessage());
+                        }
+                    } else {
+                        showError(response.message());
+                    }
+                } catch (Exception e) {
+                    Log.d("TAG", "onResponse: " + e);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MainResponseSurname> call, Throwable t) {
+                // Log error here since request failed
+                Log.e("Failure", t.toString());
+                showError("Something went wrong");
+            }
+        });
+    }
+
 }

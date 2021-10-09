@@ -1,23 +1,18 @@
 package com.prakashgujarati.khantrajputsamaj;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
 import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
 import com.prakashgujarati.khantrajputsamaj.api.ApiInterface;
-import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseCandidateDetails;
-import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseLate;
 import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseLateDetails;
 import com.prakashgujarati.khantrajputsamaj.commans.BaseActivity;
-import com.prakashgujarati.khantrajputsamaj.model.Business;
-import com.prakashgujarati.khantrajputsamaj.model.Candidate;
 import com.prakashgujarati.khantrajputsamaj.model.Late;
 import com.prakashgujarati.khantrajputsamaj.utils.Constant;
 
@@ -27,7 +22,7 @@ import retrofit2.Response;
 
 public class LateDetails extends BaseActivity {
     private ImageView iv_image;
-    private TextView late_name,late_note;
+    private TextView late_name,late_note,late_discription_single,late_name4;
     private Late lateData = new Late();
 
     private int lateId = 0;
@@ -42,7 +37,8 @@ public class LateDetails extends BaseActivity {
         iv_image = findViewById(R.id.late_image);
         late_name = findViewById(R.id.late_name);
         late_note = findViewById(R.id.late_note_single);
-
+        late_discription_single =  findViewById(R.id.late_discription_single);
+        late_name4 = findViewById(R.id.late_name4);
         callLateDetailsApi();
     }
 
@@ -89,11 +85,13 @@ public class LateDetails extends BaseActivity {
 
         late_name.setText(lateData.getFirstName() + " " + lateData.getFirstName());
         late_note.setText(lateData.getLateDate()+" "+lateData.getLateDate());
+        late_discription_single.setText(Html.fromHtml(lateData.getNotifications()));
+        late_name4.setText(Html.fromHtml(lateData.getShradhhanjali()));
         RequestOptions requestOptions = new RequestOptions();
         requestOptions = requestOptions.transforms(new CircleCrop());
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(this)
-                .load(ApiClient.BASE_URL + "" + lateData.getPicture())
+                .load(ApiClient.IMAGE_URL + "" + lateData.getPicture())
                 .apply(requestOptions)
                 .into(iv_image);
 

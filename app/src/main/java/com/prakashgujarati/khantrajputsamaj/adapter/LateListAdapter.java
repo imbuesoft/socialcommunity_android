@@ -15,14 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
-import com.prakashgujarati.khantrajputsamaj.BusinessDetails;
-import com.prakashgujarati.khantrajputsamaj.CandidateDetails;
 import com.prakashgujarati.khantrajputsamaj.LateDetails;
 import com.prakashgujarati.khantrajputsamaj.R;
 import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
-import com.prakashgujarati.khantrajputsamaj.model.Business;
 import com.prakashgujarati.khantrajputsamaj.model.Late;
-import com.prakashgujarati.khantrajputsamaj.model.Matrimoney;
 import com.prakashgujarati.khantrajputsamaj.utils.Constant;
 
 import java.util.ArrayList;
@@ -42,9 +38,9 @@ public class LateListAdapter extends RecyclerView.Adapter<LateListAdapter.ViewHo
 
     @NonNull
     @Override
-    public LateListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         view = LayoutInflater.from(parent.getContext()).inflate(R.layout.late_list_card, parent, false);
-        return new LateListAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
 
@@ -55,12 +51,14 @@ public class LateListAdapter extends RecyclerView.Adapter<LateListAdapter.ViewHo
         requestOptions = requestOptions.transforms(new CircleCrop());
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(context)
-                .load(ApiClient.BASE_URL + "" + latesData.getPicture())
+                .load(ApiClient.IMAGE_URL + "" + latesData.getPicture())
                 .apply(requestOptions)
                 .into(holder.img);
         holder.name.setText(lates.get(position).getFirstName());
+        holder.mname.setText(lates.get(position).getMiddleName());
+        holder.lname.setText(lates.get(position).getLastName());
         holder.note.setText(lates.get(position).getLateDate());
-
+        holder.address.setText(lates.get(position).getAddress());
 
        /* holder.vanue.setText(lates.get(position).getVanue());
         holder.description.setText(lates.get(position).getDescription());
@@ -85,7 +83,10 @@ public class LateListAdapter extends RecyclerView.Adapter<LateListAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView img;
         private TextView name;
+        private TextView mname;
+        private TextView lname;
         private TextView note;
+        private TextView address;
         private TextView vanue;
         private TextView description;
         private TextView type;
@@ -94,7 +95,10 @@ public class LateListAdapter extends RecyclerView.Adapter<LateListAdapter.ViewHo
             super(itemView);
             img = itemView.findViewById(R.id.late_image);
             name = itemView.findViewById(R.id.late_name);
+            mname = itemView.findViewById(R.id.late_mname);
+            lname = itemView.findViewById(R.id.late_lname);
             note = itemView.findViewById(R.id.late_note);
+            address = itemView.findViewById(R.id.late_address);
             //vanue = itemView.findViewById(R.id.matrimoney_list_like);
             //type = itemView.findViewById(R.id.matrimoney_list_like);
             //description = itemView.findViewById(R.id.short_description);

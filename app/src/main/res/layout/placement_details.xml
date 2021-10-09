@@ -14,14 +14,12 @@
         android:layout_width="200dp"
         android:layout_height="250dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginBottom="5dp"
-        android:src="@drawable/gglogo" />
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:id="@+id/placementdetail_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GujaratiGraphics"
         android:textColor="@color/black"
         android:layout_marginTop="5dp"
         android:textSize="24dp"/>
@@ -30,7 +28,6 @@
         android:id="@+id/placementdetail_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Graphics Design"
         android:textColor="#3F51B5"
         android:layout_marginTop="5dp"
         android:textSize="20dp"/>
@@ -48,8 +45,8 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:tint="@color/grey_60"
-            android:src="@mipmap/ic_web"/>
+            android:src="@mipmap/ic_web"
+            app:tint="@color/grey_60" />
 
         <TextView
             android:id="@+id/bus_web"
@@ -58,7 +55,6 @@
             android:autoLink="web"
             android:clickable="true"
             android:textColorLink="@color/grey_60"
-            android:text="www.gujaratigraphics.com"
             android:textColor="@color/grey_80"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
@@ -73,14 +69,13 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:tint="@color/grey_60"
-            android:src="@mipmap/ic_call"/>
+            android:src="@mipmap/ic_call"
+            app:tint="@color/grey_60" />
 
         <TextView
             android:id="@+id/bus_call"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="+91 9601026377"
             android:autoLink="phone"
             android:clickable="true"
             android:textColorLink="@color/grey_60"
@@ -98,14 +93,13 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:tint="@color/grey_60"
-            android:src="@mipmap/ic_email"/>
+            android:src="@mipmap/ic_email"
+            app:tint="@color/grey_60" />
 
         <TextView
             android:id="@+id/bus_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="gujaratiprakash@gmail.com"
             android:autoLink="email"
             android:clickable="true"
             android:textColorLink="@color/grey_60"
@@ -123,15 +117,14 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:tint="@color/grey_60"
-            android:src="@mipmap/ic_address"/>
+            android:src="@mipmap/ic_address"
+            app:tint="@color/grey_60" />
 
         <TextView
             android:id="@+id/bus_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autoLink="map"
-            android:text="301, Om Complex, Pushkardham Road, Rajkot - 360005 (Gujarat)"
             android:textColor="@color/grey_80"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"

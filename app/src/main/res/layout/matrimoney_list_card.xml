@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="#fff"
         android:elevation="4dp"
-        android:padding="16dp">
+        android:padding="3dp">
 
         <ImageView
             android:id="@+id/matrimoney_image"
@@ -41,7 +41,7 @@
             android:text="23 Years, 5'2, 45kgs,\nBCA, MCA \nRajkot "
             android:textColor="#8b8b8b" />
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/matrimoney_list_view"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -75,7 +75,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:src="@mipmap/add_fav" />
+            android:src="@mipmap/add_fav" />-->
 
     </RelativeLayout>
 

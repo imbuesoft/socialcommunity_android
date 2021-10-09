@@ -17,7 +17,6 @@ import com.bumptech.glide.request.RequestOptions;
 import com.prakashgujarati.khantrajputsamaj.NewsDetails;
 import com.prakashgujarati.khantrajputsamaj.R;
 import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
-import com.prakashgujarati.khantrajputsamaj.model.Late;
 import com.prakashgujarati.khantrajputsamaj.model.News;
 import com.prakashgujarati.khantrajputsamaj.utils.Constant;
 
@@ -36,9 +35,9 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
     }
 
     @Override
-    public NewsListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_list_card, parent, false);
-        return new NewsListAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
 
@@ -48,11 +47,11 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
         requestOptions = requestOptions.transforms(new CircleCrop());
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(context)
-                .load(ApiClient.BASE_URL + "" + newsData.getThumbnail())
+                .load(ApiClient.IMAGE_URL + "" + newsData.getThumbnail())
                 .apply(requestOptions)
                 .into(holder.img);
         holder.title.setText(news.get(position).getTitle());
-        holder.desc.setText(news.get(position).getHeadline());
+      //  holder.desc.setText(news.get(position).getHeadline());
         holder.time.setText(news.get(position).getReported_Datetime());
         //holder.pimg.setImageResource(news.get(position).getThumbnail());
         //holder.img.setImageResource(Integer.parseInt(news.get(position).getNews_Image()));
@@ -84,7 +83,7 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
             super(itemView);
             img = itemView.findViewById(R.id.news_image);
             title = itemView.findViewById(R.id.news_title);
-            desc = itemView.findViewById(R.id.news_description);
+          //  desc = itemView.findViewById(R.id.news_description);
             time = itemView.findViewById(R.id.news_time);
         }
     }

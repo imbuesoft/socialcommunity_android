@@ -1,8 +1,7 @@
 package com.prakashgujarati.khantrajputsamaj;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,13 +11,10 @@ import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
 import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
 import com.prakashgujarati.khantrajputsamaj.api.ApiInterface;
-import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseBusinessDetails;
 import com.prakashgujarati.khantrajputsamaj.api.response.MainResponseNewsDetails;
 import com.prakashgujarati.khantrajputsamaj.commans.BaseActivity;
-import com.prakashgujarati.khantrajputsamaj.model.Business;
 import com.prakashgujarati.khantrajputsamaj.model.News;
 import com.prakashgujarati.khantrajputsamaj.utils.Constant;
-import com.squareup.picasso.Picasso;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -87,16 +83,16 @@ public class NewsDetails extends BaseActivity {
     private void setupData() {
         title.setText(newsData.getTitle());
         user_name.setText(newsData.getHeadline());
-        desc.setText(newsData.getDetail_Report());
+        desc.setText(Html.fromHtml(newsData.getDetail_Report()));
         RequestOptions requestOptions = new RequestOptions();
         requestOptions = requestOptions.transforms(new CircleCrop());
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(this)
-                .load(ApiClient.BASE_URL + "" + newsData.getThumbnail())
+                .load(ApiClient.IMAGE_URL + "" + newsData.getThumbnail())
                 .apply(requestOptions)
                 .into(iv_pimg);
-       Glide.with(this)
-                .load(ApiClient.BASE_URL + "" + newsData.getNews_Image())
+        Glide.with(this)
+                .load(ApiClient.IMAGE_URL + "" + newsData.getNews_Image())
                 .apply(requestOptions)
                 .into(iv_img);
     }

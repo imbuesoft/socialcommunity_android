@@ -50,7 +50,7 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder
         requestOptions = requestOptions.transforms(new CircleCrop());
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(context)
-                .load(ApiClient.BASE_URL + "" + sportsData.getThumbnail())
+                .load(ApiClient.IMAGE_URL + "" + sportsData.getThumbnail())
                 .apply(requestOptions)
                 .into(holder.img);
         holder.title.setText(sports.get(position).getTitle());

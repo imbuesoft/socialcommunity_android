@@ -2,18 +2,23 @@ package com.prakashgujarati.khantrajputsamaj.fragment;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
+import com.prakashgujarati.khantrajputsamaj.Placement_Form;
 import com.prakashgujarati.khantrajputsamaj.R;
 import com.prakashgujarati.khantrajputsamaj.adapter.PlacementListAdapter;
 import com.prakashgujarati.khantrajputsamaj.api.ApiClient;
@@ -35,6 +40,11 @@ public class PlacementFragment extends BaseFragment {
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Placement> placement = new ArrayList<>();
     private PlacementListAdapter placementlistAdapter;
+
+    public void onCreate(@Nullable Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
 
     @SuppressLint("WrongConstant")
     @Override
@@ -61,6 +71,22 @@ public class PlacementFragment extends BaseFragment {
 
         callPlacementListApi();
         return view;
+    }
+
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
+        inflater.inflate(R.menu.placementmenu_item,menu);
+        super.onCreateOptionsMenu(menu,inflater);
+
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_placement:
+                Intent i = new Intent(getContext(), Placement_Form.class);
+                startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void callPlacementListApi() {

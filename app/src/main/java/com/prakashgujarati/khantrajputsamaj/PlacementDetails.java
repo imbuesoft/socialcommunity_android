@@ -1,6 +1,7 @@
 package com.prakashgujarati.khantrajputsamaj;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,14 +16,12 @@ import com.prakashgujarati.khantrajputsamaj.commans.BaseActivity;
 import com.prakashgujarati.khantrajputsamaj.model.Placement;
 import com.prakashgujarati.khantrajputsamaj.utils.Constant;
 
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PlacementDetails extends BaseActivity {
-    private TextView placement_title,placement_category,bus_web,bus_call,bus_email,bus_location;
+    private TextView placement_title,placement_category,placement_eq,placement_skills,bus_web,bus_call,placement_time;
     private ImageView placement_image;
     private Placement placementdata = new Placement();
     private int placementiId = 0;
@@ -35,10 +34,13 @@ public class PlacementDetails extends BaseActivity {
         placement_image = findViewById(R.id.placementdetail_image);
         placement_title = findViewById(R.id.placementdetail_title);
         placement_category = findViewById(R.id.placementdetail_category);
-        bus_web = findViewById(R.id.bus_web);
+        placement_eq = findViewById(R.id.bus_web);
+        placement_skills = findViewById(R.id.bus_email);
+        placement_time = findViewById(R.id.bus_location);
         bus_call = findViewById(R.id.bus_call);
-        bus_email = findViewById(R.id.bus_email);
-        bus_location = findViewById(R.id.bus_location);
+        bus_web = findViewById(R.id.bus_web);
+
+
         callPlacementDetailsApi();
     }
     private void getIntentData() {
@@ -84,17 +86,18 @@ public class PlacementDetails extends BaseActivity {
     }
 
     private void setupData() {
-        bus_web.setText(placementdata.getEducationQualification());
-        bus_email.setText(placementdata.getHeadline());
-        bus_call.setText(placementdata.getDescription());
-        bus_location.setText(placementdata.getSkills());
         placement_title.setText(placementdata.getTitle());
         placement_category.setText(placementdata.getCategory());
+        placement_eq.setText(placementdata.getEducationQualification());
+        bus_web.setText(Html.fromHtml(placementdata.getDescription()));
+        bus_call.setText(placementdata.getReferenceUrl());
+        placement_time.setText(placementdata.getReportedDatetime());
+        placement_skills.setText(placementdata.getSkills());
         RequestOptions requestOptions = new RequestOptions();
         requestOptions = requestOptions.transforms(new CircleCrop());
         requestOptions.placeholder(R.drawable.ic_user);
         Glide.with(this)
-                .load(ApiClient.BASE_URL + "" + placementdata.getThumbnail())
+                .load(ApiClient.IMAGE_URL + "" + placementdata.getThumbnail())
                 .apply(requestOptions)
                 .into(placement_image);
 

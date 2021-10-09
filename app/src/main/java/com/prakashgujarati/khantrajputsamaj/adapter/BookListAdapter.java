@@ -12,20 +12,19 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import com.prakashgujarati.khantrajputsamaj.R;
 import com.prakashgujarati.khantrajputsamaj.flipbook.SampleActivity;
-import com.prakashgujarati.khantrajputsamaj.model.BookList;
-import com.prakashgujarati.khantrajputsamaj.model.SimpleItemFour;
+import com.prakashgujarati.khantrajputsamaj.model.Book;
 
 import java.util.ArrayList;
 
 public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHolder> {
 
     private Context context;
-    private ArrayList<BookList> booklist;
+    private ArrayList<Book> book;
     private View view;
 
-    public BookListAdapter(FragmentActivity activity, ArrayList<BookList> booklist) {
+    public BookListAdapter(FragmentActivity activity, ArrayList<Book> booklist) {
         this.context = activity;
-        this.booklist = booklist;
+        this.book = booklist;
     }
 
     @Override
@@ -38,8 +37,9 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
     @Override
     public void onBindViewHolder(BookListAdapter.ViewHolder holder, int position) {
 
-        holder.title.setText(booklist.get(position).getTitle());
-        holder.bookdate.setText(booklist.get(position).getSubtitle());
+        holder.title.setText(book.get(position).getTitle());
+        holder.bookdate.setText(book.get(position).getSubtitle());
+
        /* holder.vanue.setText(SimpleItemFour.get(position).getVanue());
         holder.description.setText(SimpleItemFour.get(position).getDescription());
         holder.type.setText(SimpleItemFour.get(position).getType());*/
@@ -56,7 +56,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return booklist.size();
+        return book.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
